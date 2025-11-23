@@ -69,10 +69,11 @@ nav {
                 }
                 
                 .logo span {
-                    background: linear-gradient(90deg, #6366F1, #8B5CF6);
+                    background: linear-gradient(90deg, #e8f163ff, #000000ff);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    -webkit-text-fill-color: transparent;
                 }
                     .logo-icon {
                     width: 30px;
@@ -333,8 +334,8 @@ color: white;
             <header>
                 <nav>
                     <a href="/" class="logo">
-                        <div class="logo-icon">RR</div>
-                        <span class="text-light">Revenue</span><span>Rocket</span>
+                        <div class="logo-icon">ES</div>
+                        <span class="text-light">Esteban</span><span>Schets</span>
 </a>
                     <div class="nav-links" style="margin-left: auto;">
                         <a href="#experience" class="nav-link">Featured Experience</a>
