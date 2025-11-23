@@ -69,7 +69,7 @@ nav {
                 }
                 
                 .logo span {
-                    background: linear-gradient(90deg, #e8f163ff, #000000ff);
+                    background: #000000;
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
@@ -334,7 +334,6 @@ color: white;
             <header>
                 <nav>
                     <a href="/" class="logo">
-                        <div class="logo-icon">ES</div>
                         <span class="text-light">Esteban</span><span>Schets</span>
 </a>
                     <div class="nav-links" style="margin-left: auto;">
