@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Rocket | Senior E-Commerce Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111111',
+                        light: '#f8f8f8'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-dark font-sans">
+    <custom-header></custom-header>
+    
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="flex flex-col md:flex-row items-center justify-between mb-20">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Driving <span class="bg-dark text-light px-2 rounded-full">$300M+</span> in <span class="text-gradient-microsoft">E-Commerce</span> Revenue</h1>
+<p class="text-xl mb-8">Senior E-Commerce Leader with 6+ years experience at Microsoft & Samsonite. Performance Marketing Expert & Product Strategist.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-dark text-light px-6 py-3 rounded-full hover:bg-opacity-90 transition">Get in Touch</a>
+                    <a href="#skills" class="border-2 border-dark px-6 py-3 rounded-full hover:bg-dark hover:text-light transition">View Skills</a>
+            </div>
+</div>
+            <div class="md:w-2/5 relative">
+                <div class="bg-dark h-80 w-80 rounded-full mx-auto flex items-center justify-center">
+                    <i data-feather="shopping-bag" class="text-light" width="96" height="96" stroke-width="1.5"></i>
+                </div>
+<div class="absolute -top-6 -right-6 bg-dark text-light p-4 rounded-full text-sm rotate-12">
+                    <span class="font-bold">12+</span> Years Experience
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-dark text-light p-4 rounded-full text-sm -rotate-12">
+                    <span class="font-bold">300M+</span> Revenue
+            </div>
+</div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-12 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl my-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-indigo-800">Search Skills</h2>
+            <div class="relative">
+                <input 
+                    type="text" 
+                    placeholder="Search for skills (e.g. 'AI Marketing', 'E-Commerce')" 
+                    class="w-full px-6 py-4 rounded-full border-0 shadow-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-lg"
+                    id="searchInput"
+                >
+                <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition" id="searchButton">
+                    <i data-feather="search" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div id="searchHitContainer" class="hidden">
+                <div class="absolute z-10 top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ease-out opacity-0 transform translate-y-2">
+                    <div id="searchResults" class="max-h-96 overflow-y-auto p-4 space-y-2"></div>
+                    <div class="p-3 bg-gray-50 text-sm text-gray-500 border-t border-gray-100">
+                        <span id="resultCount">0</span> skills found
+                    </div>
+                </div>
+            </div>
+</div>
+    </section>
+
+    <!-- Companies Section -->
+<section class="animate-fade">
+<h2 class="text-3xl font-bold mb-10 text-center">Featured Experience</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <div class="bg-white p-8 rounded-3xl shadow-lg w-full md:w-1/3 text-center">
+                    <div class="h-20 mb-4 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="h-16 w-48 object-contain">
+                    </div>
+<h3 class="text-2xl font-bold mb-2">Microsoft</h3>
+                    <p class="text-gray-600 mb-4">Senior E-Commerce Manager | 2016-2022</p>
+                    <ul class="text-left list-disc pl-5 space-y-2">
+                        <li>Grew revenue by 140% YoY</li>
+                        <li>Led team of 15 specialists</li>
+                        <li>Implemented AI-driven personalization</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg w-full md:w-1/3 text-center">
+                    <div class="h-20 mb-4 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Samsonite_logo.jpg" alt="Samsonite Logo" class="h-16 w-48 object-contain">
+</div>
+<h3 class="text-2xl font-bold mb-2">Samsonite</h3>
+                    <p class="text-gray-600 mb-4">E-Commerce Director | 2012-2016</p>
+                    <ul class="text-left list-disc pl-5 space-y-2">
+                        <li>Built D2C channel from $0 to $50M</li>
+                        <li>Optimized conversion rate by 35%</li>
+                        <li>Expanded to 8 new markets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+<!-- AI Expertise Section -->
+<section id="ai" class="animate-fade mb-20 py-16 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">AI & Automation Expertise</span>
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="ai-card bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+<div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-light rounded-full p-3 mr-4">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">AI Marketing Automation</h3>
+                            <p class="text-sm text-gray-600">Automated workflows & optimization</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">Developed AI-powered marketing automation systems that increased campaign efficiency by 65% while reducing manual work.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">ChatGPT</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Zapier AI</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">HubSpot</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Marketo</span>
+                    </div>
+                </div>
+                <div class="ai-card bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+<div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-blue-500 to-teal-400 text-light rounded-full p-3 mr-4">
+                            <i data-feather="user"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">AI Agents</h3>
+                            <p class="text-sm text-gray-600">Custom AI Assistants</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">Built custom AI agents for customer support, lead qualification, and sales assistance, reducing response times by 80%.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">LangChain</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">AutoGPT</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Rasa</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Dialogflow</span>
+                    </div>
+                </div>
+                <div class="ai-card bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+<div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-green-500 to-blue-500 text-light rounded-full p-3 mr-4">
+                            <i data-feather="edit"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">AI Content Optimization</h3>
+                            <p class="text-sm text-gray-600">SEO & Performance Content</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">Created AI systems for dynamic content optimization, improving organic traffic by 120% across client websites.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Jasper</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">SurferSEO</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Frase</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Clearscope</span>
+                    </div>
+                </div>
+                <div class="ai-card bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+<div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-orange-500 to-red-500 text-light rounded-full p-3 mr-4">
+                            <i data-feather="code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">AI Web Development</h3>
+                            <p class="text-sm text-gray-600">AI-Assisted Coding</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">Leveraged AI tools to accelerate development cycles by 40% while maintaining high code quality standards.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">GitHub Copilot</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Tabnine</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Codeium</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Amazon CodeWhisperer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Performance Marketing Section -->
+<section id="performance-marketing" class="mb-20 py-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl">
+<div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Performance Marketing</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i data-feather="bar-chart-2" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Paid Media</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Google Ads</span>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Meta Ads</span>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">TikTok Ads</span>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Programmatic</span>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="flex items-center mb-6">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i data-feather="refresh-cw" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Optimization</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">A/B Testing</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Landing Pages</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Bid Strategies</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Creative Testing</span>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="flex items-center mb-6">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i data-feather="dollar-sign" class="text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">ROI Focus</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Attribution</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">LTV Modeling</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Budget Allocation</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Performance Dashboards</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Omnichannel Marketing Section -->
+<section id="omnichannel" class="mb-20 py-16 bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl">
+<div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Omnichannel Marketing</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-gray-100">
+                <div class="h-16 w-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                    <i data-feather="smartphone" class="text-purple-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Mobile</h3>
+                <p class="text-gray-600">Push notifications, in-app messaging, and SMS marketing strategies</p>
+            </div>
+            <div class="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-gray-100">
+                <div class="h-16 w-16 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
+                    <i data-feather="mail" class="text-pink-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Email</h3>
+                <p class="text-gray-600">Personalized lifecycle campaigns and automation flows</p>
+            </div>
+            <div class="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-gray-100">
+                <div class="h-16 w-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                    <i data-feather="shopping-bag" class="text-blue-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">E-Commerce</h3>
+                <p class="text-gray-600">Personalized product recommendations and cart recovery</p>
+            </div>
+            <div class="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-gray-100">
+                <div class="h-16 w-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
+                    <i data-feather="map-pin" class="text-indigo-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Retail</h3>
+                <p class="text-gray-600">In-store digital experiences and location-based marketing</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Merchandising Section -->
+<section id="merchandising" class="mb-20 py-16 bg-gradient-to-r from-orange-50 to-amber-50 rounded-3xl">
+<div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">Visual Merchandising</span>
+        </h2>
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="md:w-1/2">
+                <div class="relative h-80 bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-100 to-amber-100"></div>
+                    <div class="relative z-10 p-8 h-full flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Product Presentation</h3>
+                            <p class="text-gray-700">Strategies to maximize product visibility and appeal</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Hero Images</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">360° Views</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Video Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                        <i data-feather="grid" class="text-amber-600"></i>
+                    </div>
+                    <h4 class="font-bold">Category Pages</h4>
+                    <p class="text-sm text-gray-600 mt-1">Optimized navigation and filtering</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                        <i data-feather="star" class="text-amber-600"></i>
+                    </div>
+                    <h4 class="font-bold">Featured Products</h4>
+                    <p class="text-sm text-gray-600 mt-1">Strategic placement and promotion</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                        <i data-feather="percent" class="text-amber-600"></i>
+                    </div>
+                    <h4 class="font-bold">Promotions</h4>
+                    <p class="text-sm text-gray-600 mt-1">Bundles, discounts and offers</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                        <i data-feather="trending-up" class="text-amber-600"></i>
+                    </div>
+                    <h4 class="font-bold">Seasonal</h4>
+                    <p class="text-sm text-gray-600 mt-1">Holiday and event merchandising</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Brand Management Section -->
+<section id="brand" class="mb-20 py-16 bg-gradient-to-r from-green-50 to-teal-50 rounded-3xl">
+<div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-teal-600">Brand Strategy</span>
+        </h2>
+        <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+            <div class="lg:w-1/3 bg-white rounded-3xl shadow-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                    <i data-feather="eye" class="text-white w-16 h-16"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Brand Identity</h3>
+                    <p class="text-gray-600 mb-4">Developing cohesive brand messaging and visual language</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Voice</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tone</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Style Guide</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/3 bg-white rounded-3xl shadow-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-r from-green-400 to-teal-400 flex items-center justify-center">
+                    <i data-feather="users" class="text-white w-16 h-16"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Audience Positioning</h3>
+                    <p class="text-gray-600 mb-4">Differentiating your brand in competitive markets</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Personas</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Competitive Analysis</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">USP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/3 bg-white rounded-3xl shadow-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center">
+                    <i data-feather="award" class="text-white w-16 h-16"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Brand Equity</h3>
+                    <p class="text-gray-600 mb-4">Building long-term value and customer loyalty</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Loyalty Programs</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Advocacy</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Management Section -->
+<section id="product-mgmt" class="mb-20 py-16 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl">
+<div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-600">Product Management</span>
+        </h2>
+        <div class="relative">
+            <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                <i data-feather="package" class="w-64 h-64 text-indigo-200"></i>
+            </div>
+            <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-bold mb-4">Roadmapping</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-indigo-500">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Prioritization frameworks</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-indigo-500">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Stakeholder alignment</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-indigo-500">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Release planning</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="text-xl font-bold mb-4">Feature Development</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-blue-500">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">User story mapping</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-blue-500">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Prototyping</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-blue-500">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">MVP definition</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-indigo-400">
+                    <h3 class="text-xl font-bold mb-4">Market Fit</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-indigo-400">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Customer research</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-indigo-400">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Competitive analysis</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-indigo-400">
+                                <i data-feather="check"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Pricing strategy</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CRM Marketing Section -->
+<section id="crm" class="mb-20 py-16 bg-gradient-to-r from-pink-50 to-rose-50 rounded-3xl">
+<div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-600">CRM & Customer Marketing</span>
+        </h2>
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/2">
+                <div class="relative h-full">
+                    <div class="absolute -top-6 -left-6 bg-pink-500 rounded-2xl w-24 h-24 opacity-20"></div>
+                    <div class="absolute -bottom-6 -right-6 bg-rose-500 rounded-2xl w-24 h-24 opacity-20"></div>
+                    <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
+                        <h3 class="text-2xl font-bold mb-4 text-pink-700">Customer Lifecycle Marketing</h3>
+                        <p class="text-gray-600 mb-6">Strategies to engage customers at every stage of their journey with your brand.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 p-2 rounded-lg mr-4">
+                                    <i data-feather="user-plus" class="text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Acquisition</h4>
+                                    <p class="text-sm text-gray-600">Welcome series and onboarding</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 p-2 rounded-lg mr-4">
+                                    <i data-feather="refresh-cw" class="text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Retention</h4>
+                                    <p class="text-sm text-gray-600">Re-engagement and win-back</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 p-2 rounded-lg mr-4">
+                                    <i data-feather="heart" class="text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Loyalty</h4>
+                                    <p class="text-sm text-gray-600">Rewards and VIP programs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-400">
+                    <h4 class="font-bold mb-2">Segmentation</h4>
+                    <p class="text-sm text-gray-600">Behavioral, demographic and RFM models</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-400">
+                    <h4 class="font-bold mb-2">Personalization</h4>
+                    <p class="text-sm text-gray-600">Dynamic content and recommendations</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-300">
+                    <h4 class="font-bold mb-2">Automation</h4>
+                    <p class="text-sm text-gray-600">Triggered campaigns and workflows</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-300">
+                    <h4 class="font-bold mb-2">Testing</h4>
+                    <p class="text-sm text-gray-600">A/B testing and optimization</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-500">
+                    <h4 class="font-bold mb-2">Analytics</h4>
+                    <p class="text-sm text-gray-600">Campaign performance and LTV analysis</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-500">
+                    <h4 class="font-bold mb-2">Platforms</h4>
+                    <p class="text-sm text-gray-600">Klaviyo, HubSpot, Salesforce, Braze</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20 py-16 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-3xl hovered-element">
+            <div class="text-center mb-10">
+                <button id="toggleSkills" class="bg-dark text-light px-6 py-3 rounded-full hover:bg-opacity-90 transition flex items-center justify-center mx-auto hovered-element">
+                    <span id="toggleSkillsText">See More Skills</span>
+                    <i id="skillsArrow" data-feather="chevron-down" class="ml-2 w-5 h-5 transition-transform rotate-180"></i>
+                </button>
+            </div>
+<div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-blue-600">Core Competencies</span>
+                </h2>
+<div id="skillsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6 hidden">
+<!-- AI Performance Marketing -->
+<div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition animate-slide-left" style="opacity: 0; transform: translateX(-50px);">
+<div class="flex items-center mb-4">
+                        <div class="bg-dark text-light rounded-full p-3 mr-4">
+                            <i data-feather="bar-chart-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Performance Marketing</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Paid Search (Google/Bing Ads)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Social Media Advertising
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Programmatic Display
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Affiliate Marketing
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Email Marketing Automation
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Conversion Rate Optimization
+                        </li>
+                    </ul>
+                </div>
+                <!-- Product Management -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition animate-scale-in">
+<div class="flex items-center mb-4">
+                        <div class="bg-dark text-light rounded-full p-3 mr-4">
+                            <i data-feather="package"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Product Management</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            E-Commerce Platform Strategy
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            UX/UI Optimization
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Marketplace Expansion
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Product Roadmapping
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            A/B Testing Frameworks
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Mobile Commerce Strategy
+                        </li>
+                    </ul>
+                </div>
+                <!-- People Leadership -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition animate-slide-right">
+<div class="flex items-center mb-4">
+                        <div class="bg-dark text-light rounded-full p-3 mr-4">
+                            <i data-feather="users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">People Leadership</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Cross-Functional Team Leadership
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Talent Development
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Performance Management
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Stakeholder Alignment
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Remote Team Management
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Agile Team Coaching
+                        </li>
+                    </ul>
+                </div>
+                <!-- Analytics -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition animate-slide-left" style="opacity: 0; transform: translateX(-50px);">
+<div class="flex items-center mb-4">
+                        <div class="bg-dark text-light rounded-full p-3 mr-4">
+                            <i data-feather="pie-chart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Data & Analytics</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Google Analytics/Adobe Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Data Visualization
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Customer Segmentation
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Predictive Modeling
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Marketing Attribution
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            KPI Dashboard Creation
+                        </li>
+                    </ul>
+                </div>
+                <!-- Thought Leadership -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition animate-scale-in" style="opacity: 0; transform: scale(0.9);">
+<div class="flex items-center mb-4">
+                        <div class="bg-dark text-light rounded-full p-3 mr-4">
+                            <i data-feather="book"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Thought Leadership</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Industry Trend Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Public Speaking
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Content Strategy
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Market Research
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Competitive Intelligence
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Digital Transformation
+                        </li>
+                    </ul>
+                </div>
+                <!-- Project Management -->
+                <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition skill-card">
+<div class="flex items-center mb-4">
+                        <div class="bg-dark text-light rounded-full p-3 mr-4">
+                            <i data-feather="clipboard"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Project Management</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Agile/Scrum Methodology
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Budget Management
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Vendor Selection
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Risk Assessment
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Timeline Optimization
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-dark rounded-full mr-2"></span>
+                            Stakeholder Reporting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Achievements -->
+        <section class="animate-fade mb-20 py-16 bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">Key Achievements</span>
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-500"></div>
+<div class="text-4xl font-bold mb-2">140%</div>
+                    <p class="text-sm">YoY Revenue Growth at Microsoft</p>
+</div>
+                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+<div class="text-4xl font-bold mb-2">35%</div>
+                    <p class="text-sm">Conversion Rate Improvement</p>
+</div>
+                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-red-500"></div>
+<div class="text-4xl font-bold mb-2">15</div>
+                    <p class="text-sm">Team Members Managed</p>
+</div>
+                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500"></div>
+<div class="text-4xl font-bold mb-2">8</div>
+                    <p class="text-sm">New Markets Expanded Into</p>
+</div>
+            </div>
+</section>
+        <!-- Testimonials -->
+        <section class="animate-fade mb-20 py-16 bg-gradient-to-r from-fuchsia-50 to-purple-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-purple-600">Professional Endorsements</span>
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-dark h-12 w-12 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">CMO at Microsoft</p>
+                        </div>
+                    </div>
+                    <p class="italic">"A true e-commerce visionary who transformed our digital revenue streams. His data-driven approach and leadership skills were instrumental in growing our business by 140% year-over-year."</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-dark h-12 w-12 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">CEO at Samsonite Asia</p>
+                        </div>
+                    </div>
+                    <p class="italic">"Built our D2C channel from ground up to $50M in just 4 years. His strategic thinking and execution excellence are unmatched in the e-commerce space."</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="animate-fade mb-20 py-16 bg-gradient-to-r from-sky-50 to-blue-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-600">Let's Connect</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                    <div class="bg-white p-10 rounded-3xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-dark text-light rounded-full p-3 mr-4">
+                                <i data-feather="user"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Contact Details</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i data-feather="mail" class="text-sky-600 mr-3"></i>
+                                <span>hello@revenuerocket.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="phone" class="text-sky-600 mr-3"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="map-pin" class="text-sky-600 mr-3"></i>
+                                <span>San Francisco, CA</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="clock" class="text-sky-600 mr-3"></i>
+                                <span>Available Mon-Fri, 9AM-5PM PST</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex space-x-4">
+                            <a href="#" class="bg-dark text-light p-3 rounded-full hover:bg-opacity-90 transition">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="bg-dark text-light p-3 rounded-full hover:bg-opacity-90 transition">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="#" class="bg-dark text-light p-3 rounded-full hover:bg-opacity-90 transition">
+                                <i data-feather="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendly inline widget -->
+                    <div class="bg-white p-10 rounded-3xl shadow-lg relative overflow-hidden">
+                        <div class="absolute -top-6 -right-6 bg-sky-500 rounded-full w-24 h-24 opacity-10"></div>
+                        <div class="absolute -bottom-6 -left-6 bg-sky-400 rounded-full w-24 h-24 opacity-10"></div>
+                        
+                        <div class="flex items-center mb-6 relative z-10">
+                            <div class="bg-dark text-light rounded-full p-3 mr-4">
+                                <i data-feather="calendar"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Book an Appointment</h3>
+                        </div>
+                        <p class="mb-6 relative z-10">Schedule a 30-minute consultation to discuss how I can help grow your e-commerce business.</p>
+                        
+                        <div class="relative z-10 mb-6">
+                            <a href="#contact" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-full transition-colors duration-300 inline-flex items-center">
+                                <span>Book Now</span>
+                                <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+</div>
+</div>
+</div>
+        </section>
+    </main>
+<custom-footer></custom-footer>
+    
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
