@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -22,1050 +23,1205 @@
         }
     </script>
 </head>
+
 <body class="bg-light text-dark font-sans">
     <custom-header></custom-header>
-    
+
     <main class="container mx-auto px-4 py-12">
         <!-- Hero Section -->
         <section class="flex flex-col md:flex-row items-center justify-between mb-20">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">Driving <span class="bg-dark text-light px-2 rounded-full">&euro;300M+</span> in <span class="text-gradient-microsoft">E-Commerce</span> Revenue</h1>
-<p class="text-xl mb-8">E-commerce Professional with 6+ years experience at Microsoft and other companies. Performance marketing wizard & Product Strategist.</p>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Driving <span
+                        class="bg-dark text-light px-2 rounded-full">&euro;300M+</span> in <span
+                        class="text-gradient-microsoft">E-Commerce</span> Revenue</h1>
+                <p class="text-xl mb-8">E-commerce Professional with 6+ years experience at Microsoft and other
+                    companies. Performance marketing wizard & Product Strategist.</p>
                 <div class="flex space-x-4">
-                    <a href="#contact" class="bg-dark text-light px-6 py-3 rounded-full hover:bg-opacity-90 transition">Get in Touch</a>
-                    <a href="#skills" class="border-2 border-dark px-6 py-3 rounded-full hover:bg-dark hover:text-light transition">View Skills</a>
+                    <a href="#contact"
+                        class="bg-dark text-light px-6 py-3 rounded-full hover:bg-opacity-90 transition">Get in
+                        Touch</a>
+                    <a href="#skills"
+                        class="border-2 border-dark px-6 py-3 rounded-full hover:bg-dark hover:text-light transition">View
+                        Skills</a>
+                </div>
             </div>
-</div>
             <div class="md:w-2/5 relative">
                 <div class="bg-dark h-80 w-80 rounded-full mx-auto flex items-center justify-center">
                     <i data-feather="shopping-bag" class="text-light" width="96" height="96" stroke-width="1.5"></i>
                 </div>
-<div class="absolute -top-6 -right-6 bg-dark text-light p-4 rounded-full text-sm rotate-12">
+                <div class="absolute -top-6 -right-6 bg-dark text-light p-4 rounded-full text-sm rotate-12">
                     <span class="font-bold">6+</span> Years Experience
                 </div>
                 <div class="absolute -bottom-6 -left-6 bg-dark text-light p-4 rounded-full text-sm -rotate-12">
                     <span class="font-bold">&euro;300M+</span> Revenue
+                </div>
             </div>
-</div>
-    </section>
+        </section>
 
-    <!-- Search Section -->
-    <section class="py-12 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl my-20">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-indigo-800">Search Skills</h2>
-            <div class="relative">
-                <input 
-                    type="text" 
-                    placeholder="Search for skills (e.g. 'AI Marketing', 'E-Commerce')" 
-                    class="w-full px-6 py-4 rounded-full border-0 shadow-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-lg"
-                    id="searchInput"
-                >
-                <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition" id="searchButton">
-                    <i data-feather="search" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div id="searchHitContainer" class="hidden">
-                <div class="absolute z-10 top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ease-out opacity-0 transform translate-y-2">
-                    <div id="searchResults" class="max-h-96 overflow-y-auto p-4 space-y-2"></div>
-                    <div class="p-3 bg-gray-50 text-sm text-gray-500 border-t border-gray-100">
-                        <span id="resultCount">0</span> skills found
+        <!-- Search Section -->
+        <section class="py-12 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl my-20">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-indigo-800">Search Skills</h2>
+                <div class="relative">
+                    <input type="text" placeholder="Search for skills (e.g. 'AI Marketing', 'E-Commerce')"
+                        class="w-full px-6 py-4 rounded-full border-0 shadow-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-lg"
+                        id="searchInput">
+                    <button
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition"
+                        id="searchButton">
+                        <i data-feather="search" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div id="searchHitContainer" class="hidden">
+                    <div
+                        class="absolute z-10 top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ease-out opacity-0 transform translate-y-2">
+                        <div id="searchResults" class="max-h-96 overflow-y-auto p-4 space-y-2"></div>
+                        <div class="p-3 bg-gray-50 text-sm text-gray-500 border-t border-gray-100">
+                            <span id="resultCount">0</span> skills found
+                        </div>
                     </div>
                 </div>
             </div>
-</div>
-    </section>
+        </section>
 
-<!-- Companies Section -->
-<section class="animate-fade mb-20 py-16 bg-gradient-to-r from-slate-50 to-indigo-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-indigo-700">
-                Featured Experience
-            </span>
-        </h2>
+        <!-- Companies Section -->
+        <section class="animate-fade mb-20 py-16 bg-gradient-to-r from-slate-50 to-indigo-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-indigo-700">
+                        Featured Experience
+                    </span>
+                </h2>
 
-        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
+                <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
 
-            <!-- Microsoft -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full md:w-1/2 border border-slate-100">
-                <div class="absolute -top-3 -left-3 bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Current role
-                </div>
+                    <!-- Microsoft -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full md:w-1/2 border border-slate-100">
+                        <div
+                            class="absolute -top-3 -left-3 bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Current role
+                        </div>
 
-                <div class="h-20 mb-6 flex justify-center items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
-                         alt="Microsoft Logo"
-                         class="h-12 md:h-16 w-auto object-contain">
-                </div>
+                        <div class="h-20 mb-6 flex justify-center items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                                alt="Microsoft Logo" class="h-12 md:h-16 w-auto object-contain">
+                        </div>
 
-                <h3 class="text-2xl font-bold mb-1">Microsoft</h3>
-                <p class="text-sm uppercase tracking-wide text-indigo-500 mb-1">Senior E-commerce Manager</p>
-                <p class="text-gray-500 text-sm mb-5">2024–Present · Benelux & EU</p>
+                        <h3 class="text-2xl font-bold mb-1">Microsoft</h3>
+                        <p class="text-sm uppercase tracking-wide text-indigo-500 mb-1">Senior E-commerce Manager</p>
+                        <p class="text-gray-500 text-sm mb-5">2024–Present · Benelux & EU</p>
 
-                <div class="bg-slate-50 rounded-2xl p-4 mb-5">
-                    <p class="text-xs font-semibold text-slate-500 mb-2">Impact Highlights</p>
-                    <ul class="space-y-2 text-sm text-gray-700 list-disc pl-5">
-                        <li>Achieved +19% YoY revenue growth, including +11% CRM growth</li>
-                        <li>Increased CTR by +24% and CTO by +18% through CRM strategy</li>
-                        <li>Led regional e-commerce strategy, analytics, and AI-driven automation</li>
-                    </ul>
-                </div>
+                        <div class="bg-slate-50 rounded-2xl p-4 mb-5">
+                            <p class="text-xs font-semibold text-slate-500 mb-2">Impact Highlights</p>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc pl-5">
+                                <li>Achieved +19% YoY revenue growth, including +11% CRM growth</li>
+                                <li>Increased CTR by +24% and CTO by +18% through CRM strategy</li>
+                                <li>Led regional e-commerce strategy, analytics, and AI-driven automation</li>
+                            </ul>
+                        </div>
 
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">E-commerce Strategy</span>
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">CRM Growth</span>
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">AI Automation</span>
-                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">Analytics</span>
-                </div>
-            </div>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">E-commerce
+                                Strategy</span>
+                            <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">CRM
+                                Growth</span>
+                            <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">AI
+                                Automation</span>
+                            <span
+                                class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">Analytics</span>
+                        </div>
+                    </div>
 
-            <!-- Mines Beauty -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full md:w-1/2 border border-slate-100">
-                <div class="absolute -top-3 -left-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Scale-up experience
-                </div>
+                    <!-- Mines Beauty -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full md:w-1/2 border border-slate-100">
+                        <div
+                            class="absolute -top-3 -left-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Scale-up experience
+                        </div>
 
-                <div class="h-20 mb-6 flex justify-center items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Samsonite_logo.jpg"
-                         alt="Samsonite Logo"
-                         class="h-12 md:h-16 w-auto object-contain opacity-0 pointer-events-none">
-                    <span class="text-lg font-semibold text-slate-700">Mines Beauty</span>
-                </div>
+                        <div class="h-20 mb-6 flex justify-center items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Samsonite_logo.jpg"
+                                alt="Samsonite Logo"
+                                class="h-12 md:h-16 w-auto object-contain opacity-0 pointer-events-none">
+                            <span class="text-lg font-semibold text-slate-700">Mines Beauty</span>
+                        </div>
 
-                <h3 class="text-2xl font-bold mb-1">Mines Beauty</h3>
-                <p class="text-sm uppercase tracking-wide text-emerald-500 mb-1">E-commerce & Digital Manager</p>
-                <p class="text-gray-500 text-sm mb-5">2019–2023 · D2C Beauty</p>
-
-                <div class="bg-slate-50 rounded-2xl p-4 mb-5">
-                    <p class="text-xs font-semibold text-slate-500 mb-2">Growth Highlights</p>
-                    <ul class="space-y-2 text-sm text-gray-700 list-disc pl-5">
-                        <li>Directed online merchandising and performance marketing</li>
-                        <li>Executed paid media, SEO, and content improvements to drive growth</li>
-                        <li>Integrated new platforms and optimized digital sales operations</li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">Performance Marketing</span>
-                    <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">Merchandising</span>
-                    <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">SEO & Content</span>
-                    <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">Platform Ops</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- AI Skills section -->
-<section id="ai" class="animate-fade mb-20 py-16 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
-                AI & Automation in E-commerce
-            </span>
-        </h2>
-
-        <div class="flex flex-col lg:flex-row gap-8 items-start">
-            <!-- Left: Narrative AI overview -->
-            <div class="lg:w-1/2">
-                <div class="relative h-full">
-                    <div class="absolute -top-6 -left-6 bg-purple-500 rounded-2xl w-24 h-24 opacity-20"></div>
-                    <div class="absolute -bottom-6 -right-6 bg-indigo-500 rounded-2xl w-24 h-24 opacity-20"></div>
-                    <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
-                        <h3 class="text-2xl font-bold mb-4 text-purple-700">Applied AI Across the Funnel</h3>
-                        <p class="text-gray-600 mb-6">
-                            Hands-on implementation of AI in CRM, content, and analytics to remove manual work and drive measurable revenue and engagement uplifts.
+                        <h3 class="text-2xl font-bold mb-1">Mines Beauty</h3>
+                        <p class="text-sm uppercase tracking-wide text-emerald-500 mb-1">E-commerce & Digital Manager
                         </p>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="bg-purple-100 p-2 rounded-lg mr-4 mt-1">
-                                    <i data-feather="cpu" class="text-purple-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">AI Marketing Automation</h4>
-                                    <p class="text-sm text-gray-600">
-                                        Predictive journeys, triggered campaigns, and CRM workflows that scale 1:1 communication.
-                                    </p>
+                        <p class="text-gray-500 text-sm mb-5">2019–2023 · D2C Beauty</p>
+
+                        <div class="bg-slate-50 rounded-2xl p-4 mb-5">
+                            <p class="text-xs font-semibold text-slate-500 mb-2">Growth Highlights</p>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc pl-5">
+                                <li>Directed online merchandising and performance marketing</li>
+                                <li>Executed paid media, SEO, and content improvements to drive growth</li>
+                                <li>Integrated new platforms and optimized digital sales operations</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">Performance
+                                Marketing</span>
+                            <span
+                                class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">Merchandising</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">SEO &
+                                Content</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">Platform
+                                Ops</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Skills section -->
+        <section id="ai" class="animate-fade mb-20 py-16 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+                        AI & Automation in E-commerce
+                    </span>
+                </h2>
+
+                <div class="flex flex-col lg:flex-row gap-8 items-start">
+                    <!-- Left: Narrative AI overview -->
+                    <div class="lg:w-1/2">
+                        <div class="relative h-full">
+                            <div class="absolute -top-6 -left-6 bg-purple-500 rounded-2xl w-24 h-24 opacity-20"></div>
+                            <div class="absolute -bottom-6 -right-6 bg-indigo-500 rounded-2xl w-24 h-24 opacity-20">
+                            </div>
+                            <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
+                                <h3 class="text-2xl font-bold mb-4 text-purple-700">Applied AI Across the Funnel</h3>
+                                <p class="text-gray-600 mb-6">
+                                    Hands-on implementation of AI in CRM, content, and analytics to remove manual work
+                                    and drive measurable revenue and engagement uplifts.
+                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-purple-100 p-2 rounded-lg mr-4 mt-1">
+                                            <i data-feather="cpu" class="text-purple-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">AI Marketing Automation</h4>
+                                            <p class="text-sm text-gray-600">
+                                                Predictive journeys, triggered campaigns, and CRM workflows that scale
+                                                1:1 communication.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="bg-indigo-100 p-2 rounded-lg mr-4 mt-1">
+                                            <i data-feather="user" class="text-indigo-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">AI Agents & Copilots</h4>
+                                            <p class="text-sm text-gray-600">
+                                                Internal copilots for reporting, pricing analysis, and operational
+                                                support across teams.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="bg-emerald-100 p-2 rounded-lg mr-4 mt-1">
+                                            <i data-feather="bar-chart-2" class="text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Data & Content Intelligence</h4>
+                                            <p class="text-sm text-gray-600">
+                                                AI-assisted content, SEO, and dashboarding to improve traffic, CTR, and
+                                                decision speed.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-2 rounded-lg mr-4 mt-1">
-                                    <i data-feather="user" class="text-indigo-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">AI Agents & Copilots</h4>
-                                    <p class="text-sm text-gray-600">
-                                        Internal copilots for reporting, pricing analysis, and operational support across teams.
-                                    </p>
-                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Compact skill cards -->
+                    <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-purple-400">
+                            <h4 class="font-bold mb-2">CRM Automation</h4>
+                            <p class="text-sm text-gray-600 mb-3">
+                                Triggered flows, dynamic segments, and send-time optimization.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-xs">Power
+                                    Automate</span>
+                                <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-xs">Azure
+                                    AI</span>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-emerald-100 p-2 rounded-lg mr-4 mt-1">
-                                    <i data-feather="bar-chart-2" class="text-emerald-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Data & Content Intelligence</h4>
-                                    <p class="text-sm text-gray-600">
-                                        AI-assisted content, SEO, and dashboarding to improve traffic, CTR, and decision speed.
-                                    </p>
-                                </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-indigo-400">
+                            <h4 class="font-bold mb-2">AI Agents</h4>
+                            <p class="text-sm text-gray-600 mb-3">
+                                Copilots for reporting, file retrieval, and day-to-day analysis.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full text-xs">Copilot
+                                    Studio</span>
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full text-xs">GPT /
+                                    Gemini</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-emerald-400">
+                            <h4 class="font-bold mb-2">Content & SEO</h4>
+                            <p class="text-sm text-gray-600 mb-3">
+                                AI-assisted copy, metadata, and variant testing for campaigns.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full text-xs">Azure
+                                    OpenAI</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full text-xs">SEO
+                                    Support</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-400">
+                            <h4 class="font-bold mb-2">Data Automation</h4>
+                            <p class="text-sm text-gray-600 mb-3">
+                                Auto-updated dashboards, pricing views, and performance packs.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-xs">Power BI</span>
+                                <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-xs">SharePoint
+                                    Flows</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-400">
+                            <h4 class="font-bold mb-2">Experimentation</h4>
+                            <p class="text-sm text-gray-600 mb-3">
+                                AI-supported A/B test design and readouts for campaigns and UX.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-pink-50 text-pink-800 px-3 py-1 rounded-full text-xs">Test
+                                    Frameworks</span>
+                                <span class="bg-pink-50 text-pink-800 px-3 py-1 rounded-full text-xs">Variant
+                                    Analysis</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-slate-400">
+                            <h4 class="font-bold mb-2">Tooling Stack</h4>
+                            <p class="text-sm text-gray-600 mb-3">
+                                Combining Microsoft stack, LLMs, and analytics into one workflow.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-50 text-slate-800 px-3 py-1 rounded-full text-xs">M365
+                                    Stack</span>
+                                <span class="bg-slate-50 text-slate-800 px-3 py-1 rounded-full text-xs">AI
+                                    Integrations</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- Performance Marketing Section -->
+        <section id="performance-marketing" class="mb-20 py-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-700">
+                        Performance Marketing
+                    </span>
+                </h2>
 
-            <!-- Right: Compact skill cards -->
-            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-purple-400">
-                    <h4 class="font-bold mb-2">CRM Automation</h4>
-                    <p class="text-sm text-gray-600 mb-3">
-                        Triggered flows, dynamic segments, and send-time optimization.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-xs">Power Automate</span>
-                        <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-xs">Azure AI</span>
-                    </div>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-indigo-400">
-                    <h4 class="font-bold mb-2">AI Agents</h4>
-                    <p class="text-sm text-gray-600 mb-3">
-                        Copilots for reporting, file retrieval, and day-to-day analysis.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full text-xs">Copilot Studio</span>
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full text-xs">GPT / Gemini</span>
-                    </div>
-                </div>
+                    <!-- Paid Media / Acquisition -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-slate-100">
+                        <div
+                            class="absolute -top-3 -left-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Traffic & Acquisition
+                        </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-emerald-400">
-                    <h4 class="font-bold mb-2">Content & SEO</h4>
-                    <p class="text-sm text-gray-600 mb-3">
-                        AI-assisted copy, metadata, and variant testing for campaigns.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full text-xs">Azure OpenAI</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full text-xs">SEO Support</span>
-                    </div>
-                </div>
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-3 rounded-xl mr-4">
+                                <i data-feather="bar-chart-2" class="text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Paid Media Mix</h3>
+                        </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-400">
-                    <h4 class="font-bold mb-2">Data Automation</h4>
-                    <p class="text-sm text-gray-600 mb-3">
-                        Auto-updated dashboards, pricing views, and performance packs.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-xs">Power BI</span>
-                        <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-xs">SharePoint Flows</span>
-                    </div>
-                </div>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Planning and managing paid channels to drive qualified traffic and new customers at scalable
+                            CAC.
+                        </p>
 
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-400">
-                    <h4 class="font-bold mb-2">Experimentation</h4>
-                    <p class="text-sm text-gray-600 mb-3">
-                        AI-supported A/B test design and readouts for campaigns and UX.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-pink-50 text-pink-800 px-3 py-1 rounded-full text-xs">Test Frameworks</span>
-                        <span class="bg-pink-50 text-pink-800 px-3 py-1 rounded-full text-xs">Variant Analysis</span>
+                        <div class="bg-blue-50 rounded-2xl p-4">
+                            <p class="text-xs font-semibold text-blue-700 mb-2">Channels & Formats</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Search (Google /
+                                    Microsoft)</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Paid
+                                    Social</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Shopping &
+                                    Product Feeds</span>
+                                <span
+                                    class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Remarketing</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-slate-400">
-                    <h4 class="font-bold mb-2">Tooling Stack</h4>
-                    <p class="text-sm text-gray-600 mb-3">
-                        Combining Microsoft stack, LLMs, and analytics into one workflow.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-50 text-slate-800 px-3 py-1 rounded-full text-xs">M365 Stack</span>
-                        <span class="bg-slate-50 text-slate-800 px-3 py-1 rounded-full text-xs">AI Integrations</span>
+                    <!-- Optimization / CRO -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-slate-100">
+                        <div
+                            class="absolute -top-3 -left-3 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Conversion & Efficiency
+                        </div>
+
+                        <div class="flex items-center mb-6">
+                            <div class="bg-purple-100 p-3 rounded-xl mr-4">
+                                <i data-feather="refresh-cw" class="text-purple-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Funnel Optimization</h3>
+                        </div>
+
+                        <p class="text-sm text-gray-700 mb-4">
+                            Improving click-to-conversion performance through creative, landing page, and on-site
+                            journey optimisation.
+                        </p>
+
+                        <div class="bg-purple-50 rounded-2xl p-4">
+                            <p class="text-xs font-semibold text-purple-700 mb-2">CRO & Execution</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Landing Page
+                                    A/B Tests</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Creative &
+                                    Message Iteration</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Audience &
+                                    Bid Optimisation</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">On-Site
+                                    Merchandising</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- ROI / Measurement -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-slate-100">
+                        <div
+                            class="absolute -top-3 -left-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            ROI & Scaling
+                        </div>
+
+                        <div class="flex items-center mb-6">
+                            <div class="bg-green-100 p-3 rounded-xl mr-4">
+                                <i data-feather="dollar-sign" class="text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Measurement & Profitability</h3>
+                        </div>
+
+                        <p class="text-sm text-gray-700 mb-4">
+                            Tracking the full performance picture to reallocate budget, scale winners, and protect
+                            margin.
+                        </p>
+
+                        <div class="bg-green-50 rounded-2xl p-4">
+                            <p class="text-xs font-semibold text-green-700 mb-2">Metrics & Decisions</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">CAC & ROAS
+                                    Monitoring</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Attribution &
+                                    Incrementality</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Budget & Bid
+                                    Reallocation</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Dashboards &
+                                    Weekly Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- Performance Marketing Section -->
-<section id="performance-marketing" class="mb-20 py-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-blue-700">
-                Performance Marketing
-            </span>
-        </h2>
+        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Omnichannel Marketing Section -->
+        <section id="omnichannel" class="mb-20 py-16 bg-gradient-to-r from-slate-50 to-purple-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-purple-700">
+                        Omnichannel Marketing
+                    </span>
+                </h2>
 
-            <!-- Paid Media / Acquisition -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-slate-100">
-                <div class="absolute -top-3 -left-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Traffic & Acquisition
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <div class="flex items-center mb-6">
-                    <div class="bg-blue-100 p-3 rounded-xl mr-4">
-                        <i data-feather="bar-chart-2" class="text-blue-600"></i>
+                    <!-- Mobile / App -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div
+                            class="absolute -top-3 -left-3 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Mobile First
+                        </div>
+
+                        <div class="h-16 w-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <i data-feather="smartphone" class="text-purple-600 w-8 h-8"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-2">Mobile & App Journeys</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Optimizing mobile touchpoints and in-app engagement to align with channel goals.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-purple-50 text-purple-800 px-2.5 py-1 rounded-full">Push Journeys</span>
+                            <span class="bg-purple-50 text-purple-800 px-2.5 py-1 rounded-full">App Merchandising</span>
+                            <span class="bg-purple-50 text-purple-800 px-2.5 py-1 rounded-full">Mobile CRO</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold">Paid Media Mix</h3>
-                </div>
 
-                <p class="text-sm text-gray-700 mb-4">
-                    Planning and managing paid channels to drive qualified traffic and new customers at scalable CAC.
-                </p>
+                    <!-- Email / CRM -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div
+                            class="absolute -top-3 -left-3 bg-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Customer Data
+                        </div>
 
-                <div class="bg-blue-50 rounded-2xl p-4">
-                    <p class="text-xs font-semibold text-blue-700 mb-2">Channels & Formats</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Search (Google / Microsoft)</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Paid Social</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Shopping & Product Feeds</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Remarketing</span>
+                        <div class="h-16 w-16 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
+                            <i data-feather="mail" class="text-pink-600 w-8 h-8"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-2">Email & CRM</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Using segmentation, lifecycle flows, and analytics to deliver consistent cross-channel
+                            messaging.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-pink-50 text-pink-800 px-2.5 py-1 rounded-full">Lifecycle Programs</span>
+                            <span class="bg-pink-50 text-pink-800 px-2.5 py-1 rounded-full">Behavioral Segments</span>
+                            <span class="bg-pink-50 text-pink-800 px-2.5 py-1 rounded-full">Cross-Channel Sync</span>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Optimization / CRO -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-slate-100">
-                <div class="absolute -top-3 -left-3 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Conversion & Efficiency
-                </div>
+                    <!-- E-commerce / Digital Storefronts -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div
+                            class="absolute -top-3 -left-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Digital Retail
+                        </div>
 
-                <div class="flex items-center mb-6">
-                    <div class="bg-purple-100 p-3 rounded-xl mr-4">
-                        <i data-feather="refresh-cw" class="text-purple-600"></i>
+                        <div class="h-16 w-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <i data-feather="shopping-bag" class="text-blue-600 w-8 h-8"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-2">E-commerce Touchpoints</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Aligning product discovery, on-site journeys, and content execution with omnichannel
+                            strategy.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-blue-50 text-blue-800 px-2.5 py-1 rounded-full">Assortment Logic</span>
+                            <span class="bg-blue-50 text-blue-800 px-2.5 py-1 rounded-full">Content Ops</span>
+                            <span class="bg-blue-50 text-blue-800 px-2.5 py-1 rounded-full">On-Site
+                                Personalization</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold">Funnel Optimization</h3>
-                </div>
 
-                <p class="text-sm text-gray-700 mb-4">
-                    Improving click-to-conversion performance through creative, landing page, and on-site journey optimisation.
-                </p>
+                    <!-- Retail / O&O -->
+                    <div
+                        class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div
+                            class="absolute -top-3 -left-3 bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Offline & Online
+                        </div>
 
-                <div class="bg-purple-50 rounded-2xl p-4">
-                    <p class="text-xs font-semibold text-purple-700 mb-2">CRO & Execution</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Landing Page A/B Tests</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Creative & Message Iteration</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Audience & Bid Optimisation</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">On-Site Merchandising</span>
+                        <div class="h-16 w-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
+                            <i data-feather="map-pin" class="text-indigo-600 w-8 h-8"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-2">O&O + Retail Alignment</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Coordinating online and retail channels for launches, stock visibility, and unified customer
+                            experience.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full">Launch Alignment</span>
+                            <span class="bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full">Stock & Visibility
+                                Sync</span>
+                            <span class="bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full">Unified Messaging</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
+        </section>
 
-            <!-- ROI / Measurement -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-slate-100">
-                <div class="absolute -top-3 -left-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    ROI & Scaling
-                </div>
+        <!-- Merchandising Section -->
+        <section id="merchandising" class="mb-20 py-16 bg-gradient-to-r from-orange-50 to-amber-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">Visual
+                        Merchandising</span>
+                </h2>
 
-                <div class="flex items-center mb-6">
-                    <div class="bg-green-100 p-3 rounded-xl mr-4">
-                        <i data-feather="dollar-sign" class="text-green-600"></i>
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+
+                    <!-- Main Merch Block -->
+                    <div class="md:w-1/2">
+                        <div class="relative h-80 bg-white rounded-3xl shadow-lg overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-100 to-amber-100"></div>
+
+                            <div class="relative z-10 p-8 h-full flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-2">Product Presentation</h3>
+                                    <p class="text-gray-700">
+                                        Structured on-site execution to maximize visibility, conversion, and relevance
+                                        across digital shelves.
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Content
+                                        Quality</span>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">On-Site
+                                        Relevance</span>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Merch
+                                        Standards</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold">Measurement & Profitability</h3>
-                </div>
 
-                <p class="text-sm text-gray-700 mb-4">
-                    Tracking the full performance picture to reallocate budget, scale winners, and protect margin.
-                </p>
+                    <!-- Sub-sections -->
+                    <div class="md:w-1/2 grid grid-cols-2 gap-4">
 
-                <div class="bg-green-50 rounded-2xl p-4">
-                    <p class="text-xs font-semibold text-green-700 mb-2">Metrics & Decisions</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">CAC & ROAS Monitoring</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Attribution & Incrementality</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Budget & Bid Reallocation</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Dashboards & Weekly Reviews</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Omnichannel Marketing Section -->
-<section id="omnichannel" class="mb-20 py-16 bg-gradient-to-r from-slate-50 to-purple-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-purple-700">
-                Omnichannel Marketing
-            </span>
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <!-- Mobile / App -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute -top-3 -left-3 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Mobile First
-                </div>
-
-                <div class="h-16 w-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                    <i data-feather="smartphone" class="text-purple-600 w-8 h-8"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">Mobile & App Journeys</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    Optimizing mobile touchpoints and in-app engagement to align with channel goals.
-                </p>
-
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-purple-50 text-purple-800 px-2.5 py-1 rounded-full">Push Journeys</span>
-                    <span class="bg-purple-50 text-purple-800 px-2.5 py-1 rounded-full">App Merchandising</span>
-                    <span class="bg-purple-50 text-purple-800 px-2.5 py-1 rounded-full">Mobile CRO</span>
-                </div>
-            </div>
-
-            <!-- Email / CRM -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute -top-3 -left-3 bg-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Customer Data
-                </div>
-
-                <div class="h-16 w-16 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
-                    <i data-feather="mail" class="text-pink-600 w-8 h-8"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">Email & CRM</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    Using segmentation, lifecycle flows, and analytics to deliver consistent cross-channel messaging.
-                </p>
-
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-pink-50 text-pink-800 px-2.5 py-1 rounded-full">Lifecycle Programs</span>
-                    <span class="bg-pink-50 text-pink-800 px-2.5 py-1 rounded-full">Behavioral Segments</span>
-                    <span class="bg-pink-50 text-pink-800 px-2.5 py-1 rounded-full">Cross-Channel Sync</span>
-                </div>
-            </div>
-
-            <!-- E-commerce / Digital Storefronts -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute -top-3 -left-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Digital Retail
-                </div>
-
-                <div class="h-16 w-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                    <i data-feather="shopping-bag" class="text-blue-600 w-8 h-8"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">E-commerce Touchpoints</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    Aligning product discovery, on-site journeys, and content execution with omnichannel strategy.
-                </p>
-
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-blue-50 text-blue-800 px-2.5 py-1 rounded-full">Assortment Logic</span>
-                    <span class="bg-blue-50 text-blue-800 px-2.5 py-1 rounded-full">Content Ops</span>
-                    <span class="bg-blue-50 text-blue-800 px-2.5 py-1 rounded-full">On-Site Personalization</span>
-                </div>
-            </div>
-
-            <!-- Retail / O&O -->
-            <div class="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute -top-3 -left-3 bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                    Offline & Online
-                </div>
-
-                <div class="h-16 w-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
-                    <i data-feather="map-pin" class="text-indigo-600 w-8 h-8"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">O&O + Retail Alignment</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    Coordinating online and retail channels for launches, stock visibility, and unified customer experience.
-                </p>
-
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full">Launch Alignment</span>
-                    <span class="bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full">Stock & Visibility Sync</span>
-                    <span class="bg-indigo-50 text-indigo-800 px-2.5 py-1 rounded-full">Unified Messaging</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Merchandising Section -->
-<section id="merchandising" class="mb-20 py-16 bg-gradient-to-r from-orange-50 to-amber-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">Visual Merchandising</span>
-        </h2>
-
-        <div class="flex flex-col md:flex-row gap-8 items-center">
-
-            <!-- Main Merch Block -->
-            <div class="md:w-1/2">
-                <div class="relative h-80 bg-white rounded-3xl shadow-lg overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-100 to-amber-100"></div>
-
-                    <div class="relative z-10 p-8 h-full flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold mb-2">Product Presentation</h3>
-                            <p class="text-gray-700">
-                                Structured on-site execution to maximize visibility, conversion, and relevance across digital shelves.
+                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                            <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="grid" class="text-amber-600"></i>
+                            </div>
+                            <h4 class="font-bold">Category Architecture</h4>
+                            <p class="text-sm text-gray-600 mt-1">
+                                Structuring product groups for discoverability and flow.
                             </p>
                         </div>
 
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Content Quality</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">On-Site Relevance</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Merch Standards</span>
+                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                            <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="star" class="text-amber-600"></i>
+                            </div>
+                            <h4 class="font-bold">Priority Listings</h4>
+                            <p class="text-sm text-gray-600 mt-1">
+                                Elevating key SKUs with strategic placement.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                            <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="percent" class="text-amber-600"></i>
+                            </div>
+                            <h4 class="font-bold">Value Drivers</h4>
+                            <p class="text-sm text-gray-600 mt-1">
+                                Offer execution, bundle logic, and margin-aware promotions.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                            <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="trending-up" class="text-amber-600"></i>
+                            </div>
+                            <h4 class="font-bold">Campaign Moments</h4>
+                            <p class="text-sm text-gray-600 mt-1">
+                                Cohesive merchandising for launches and seasonal peaks.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Strategy Section -->
+        <!-- Brand Strategy Section -->
+        <section id="brand" class="mb-20 py-16 bg-gradient-to-r from-slate-50 to-emerald-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-teal-600">
+                        Brand Strategy
+                    </span>
+                </h2>
+
+                <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+
+                    <!-- Brand Identity -->
+                    <div
+                        class="lg:w-1/3 bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 shadow-md">
+                                Foundation
+                            </span>
+                        </div>
+                        <div
+                            class="h-48 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center">
+                            <i data-feather="eye" class="text-white w-16 h-16"></i>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3 gap-3">
+                                <h3 class="text-xl font-bold">Brand Identity</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Establishing a unified identity across all digital and retail touchpoints to strengthen
+                                recognisability and trust.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Guidelines</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Tone of Voice</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Visual
+                                    Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audience Positioning -->
+                    <div
+                        class="lg:w-1/3 bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 shadow-md">
+                                Targeting
+                            </span>
+                        </div>
+                        <div
+                            class="h-48 bg-gradient-to-r from-emerald-400 to-teal-400 flex items-center justify-center">
+                            <i data-feather="users" class="text-white w-16 h-16"></i>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3 gap-3">
+                                <h3 class="text-xl font-bold">Audience Positioning</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Translating actionable insights into positioning that matches customer motivations and
+                                category behaviours.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Customer
+                                    Segments</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Persona
+                                    Insight</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Value
+                                    Messaging</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Equity -->
+                    <div
+                        class="lg:w-1/3 bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition-all">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-700 shadow-md">
+                                Growth
+                            </span>
+                        </div>
+                        <div
+                            class="h-48 bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center">
+                            <i data-feather="award" class="text-white w-16 h-16"></i>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3 gap-3">
+                                <h3 class="text-xl font-bold">Brand Equity</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Driving long-term brand value through consistency, high-performing touchpoints, and
+                                strong customer experience.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Brand Health</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">CX Alignment</span>
+                                <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Retention
+                                    Levers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CRM Marketing Section -->
+        <section id="crm" class="mb-20 py-16 bg-gradient-to-r from-pink-50 to-rose-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-600">CRM &
+                        Customer Marketing</span>
+                </h2>
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="relative h-full">
+                            <div class="absolute -top-6 -left-6 bg-pink-500 rounded-2xl w-24 h-24 opacity-20"></div>
+                            <div class="absolute -bottom-6 -right-6 bg-rose-500 rounded-2xl w-24 h-24 opacity-20"></div>
+                            <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
+                                <h3 class="text-2xl font-bold mb-4 text-pink-700">Customer Lifecycle Marketing</h3>
+                                <p class="text-gray-600 mb-6">Strategies to engage customers at every stage of their
+                                    journey with your brand.</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <div class="bg-pink-100 p-2 rounded-lg mr-4">
+                                            <i data-feather="user-plus" class="text-pink-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Acquisition</h4>
+                                            <p class="text-sm text-gray-600">Welcome series and onboarding</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="bg-pink-100 p-2 rounded-lg mr-4">
+                                            <i data-feather="refresh-cw" class="text-pink-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Retention</h4>
+                                            <p class="text-sm text-gray-600">Re-engagement and win-back</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="bg-pink-100 p-2 rounded-lg mr-4">
+                                            <i data-feather="heart" class="text-pink-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Loyalty</h4>
+                                            <p class="text-sm text-gray-600">Rewards and VIP programs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-400">
+                            <h4 class="font-bold mb-2">Segmentation</h4>
+                            <p class="text-sm text-gray-600">Behavioral, demographic and RFM models</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-400">
+                            <h4 class="font-bold mb-2">Personalization</h4>
+                            <p class="text-sm text-gray-600">Dynamic content and recommendations</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-300">
+                            <h4 class="font-bold mb-2">Automation</h4>
+                            <p class="text-sm text-gray-600">Triggered campaigns and workflows</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-300">
+                            <h4 class="font-bold mb-2">Testing</h4>
+                            <p class="text-sm text-gray-600">A/B testing and optimization</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-500">
+                            <h4 class="font-bold mb-2">Analytics</h4>
+                            <p class="text-sm text-gray-600">Campaign performance and LTV analysis</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-500">
+                            <h4 class="font-bold mb-2">Platforms</h4>
+                            <p class="text-sm text-gray-600">Klaviyo, HubSpot, Salesforce, Braze</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Sub-sections -->
-            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+        <!-- Business & Market Intelligence Section -->
+        <section id="market-intel" class="mb-20 py-16 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
 
-                <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
-                        <i data-feather="grid" class="text-amber-600"></i>
-                    </div>
-                    <h4 class="font-bold">Category Architecture</h4>
-                    <p class="text-sm text-gray-600 mt-1">
-                        Structuring product groups for discoverability and flow.
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
-                        <i data-feather="star" class="text-amber-600"></i>
-                    </div>
-                    <h4 class="font-bold">Priority Listings</h4>
-                    <p class="text-sm text-gray-600 mt-1">
-                        Elevating key SKUs with strategic placement.
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
-                        <i data-feather="percent" class="text-amber-600"></i>
-                    </div>
-                    <h4 class="font-bold">Value Drivers</h4>
-                    <p class="text-sm text-gray-600 mt-1">
-                        Offer execution, bundle logic, and margin-aware promotions.
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
-                        <i data-feather="trending-up" class="text-amber-600"></i>
-                    </div>
-                    <h4 class="font-bold">Campaign Moments</h4>
-                    <p class="text-sm text-gray-600 mt-1">
-                        Cohesive merchandising for launches and seasonal peaks.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Brand Strategy Section -->
-<!-- Brand Strategy Section -->
-<section id="brand" class="mb-20 py-16 bg-gradient-to-r from-slate-50 to-emerald-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-teal-600">
-                Brand Strategy
-            </span>
-        </h2>
-
-        <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-
-            <!-- Brand Identity -->
-            <div class="lg:w-1/3 bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute top-3 left-3 z-10">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 shadow-md">
-                        Foundation
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600">
+                        Business & Market Intelligence
                     </span>
-                </div>
-                <div class="h-48 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center">
-                    <i data-feather="eye" class="text-white w-16 h-16"></i>
-                </div>
+                </h2>
 
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3 gap-3">
-                        <h3 class="text-xl font-bold">Brand Identity</h3>
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                        <i data-feather="activity" class="text-indigo-200 w-64 h-64"></i>
                     </div>
-                    <p class="text-gray-600 mb-4">
-                        Establishing a unified identity across all digital and retail touchpoints to strengthen recognisability and trust.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Guidelines</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Tone of Voice</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Visual Systems</span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Audience Positioning -->
-            <div class="lg:w-1/3 bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute top-3 left-3 z-10">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 shadow-md">
-                        Targeting
-                    </span>
-                </div>
-                <div class="h-48 bg-gradient-to-r from-emerald-400 to-teal-400 flex items-center justify-center">
-                    <i data-feather="users" class="text-white w-16 h-16"></i>
-                </div>
+                    <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3 gap-3">
-                        <h3 class="text-xl font-bold">Audience Positioning</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Translating actionable insights into positioning that matches customer motivations and category behaviours.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Customer Segments</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Persona Insight</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Value Messaging</span>
-                    </div>
-                </div>
-            </div>
+                        <!-- Business Insights -->
+                        <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-indigo-500">
+                            <h3 class="text-xl font-bold mb-4">Business Insights & Reporting</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-indigo-500 w-5"></i>
+                                    Power BI dashboards for e-commerce, CRM, and revenue insights
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-indigo-500 w-5"></i>
+                                    Automated reporting pipelines using Power Automate & SharePoint
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-indigo-500 w-5"></i>
+                                    Weekly performance packs for leadership decision-making
+                                </li>
+                            </ul>
 
-            <!-- Brand Equity -->
-            <div class="lg:w-1/3 bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition-all">
-                <div class="absolute top-3 left-3 z-10">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-700 shadow-md">
-                        Growth
-                    </span>
-                </div>
-                <div class="h-48 bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center">
-                    <i data-feather="award" class="text-white w-16 h-16"></i>
-                </div>
-
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3 gap-3">
-                        <h3 class="text-xl font-bold">Brand Equity</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Driving long-term brand value through consistency, high-performing touchpoints, and strong customer experience.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Brand Health</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">CX Alignment</span>
-                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full">Retention Levers</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- CRM Marketing Section -->
-<section id="crm" class="mb-20 py-16 bg-gradient-to-r from-pink-50 to-rose-50 rounded-3xl">
-<div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-600">CRM & Customer Marketing</span>
-        </h2>
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-            <div class="lg:w-1/2">
-                <div class="relative h-full">
-                    <div class="absolute -top-6 -left-6 bg-pink-500 rounded-2xl w-24 h-24 opacity-20"></div>
-                    <div class="absolute -bottom-6 -right-6 bg-rose-500 rounded-2xl w-24 h-24 opacity-20"></div>
-                    <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
-                        <h3 class="text-2xl font-bold mb-4 text-pink-700">Customer Lifecycle Marketing</h3>
-                        <p class="text-gray-600 mb-6">Strategies to engage customers at every stage of their journey with your brand.</p>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <div class="bg-pink-100 p-2 rounded-lg mr-4">
-                                    <i data-feather="user-plus" class="text-pink-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Acquisition</h4>
-                                    <p class="text-sm text-gray-600">Welcome series and onboarding</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="bg-pink-100 p-2 rounded-lg mr-4">
-                                    <i data-feather="refresh-cw" class="text-pink-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Retention</h4>
-                                    <p class="text-sm text-gray-600">Re-engagement and win-back</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="bg-pink-100 p-2 rounded-lg mr-4">
-                                    <i data-feather="heart" class="text-pink-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Loyalty</h4>
-                                    <p class="text-sm text-gray-600">Rewards and VIP programs</p>
-                                </div>
+                            <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Power BI</span>
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Adobe Analytics</span>
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Reporting
+                                    Automation</span>
                             </div>
                         </div>
+
+                        <!-- KPI Management -->
+                        <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-blue-500">
+                            <h3 class="text-xl font-bold mb-4">KPI Management & Performance</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-blue-500 w-5"></i>
+                                    Ownership of revenue, CLV, CTR, CTO, and conversion metrics
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-blue-500 w-5"></i>
+                                    Performance readouts for CRM, paid media, and merchandising
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-blue-500 w-5"></i>
+                                    KPI-driven optimisation to strengthen customer engagement
+                                </li>
+                            </ul>
+
+                            <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                                <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">Conversion
+                                    Analytics</span>
+                                <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">CRM Metrics</span>
+                                <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">Performance
+                                    Tracking</span>
+                            </div>
+                        </div>
+
+                        <!-- Market Insights -->
+                        <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-indigo-400">
+                            <h3 class="text-xl font-bold mb-4">Market Insights & Competitive Analysis</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-indigo-400 w-5"></i>
+                                    Competitive tracking of pricing, assortment, and promotional pressure
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-indigo-400 w-5"></i>
+                                    Category visibility audits for retail & online marketplaces
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-feather="check" class="text-indigo-400 w-5"></i>
+                                    Actionable insights that guide go-to-market & merchandising plans
+                                </li>
+                            </ul>
+
+                            <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Benchmarking</span>
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Pricing
+                                    Intelligence</span>
+                                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Category
+                                    Analysis</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-400">
-                    <h4 class="font-bold mb-2">Segmentation</h4>
-                    <p class="text-sm text-gray-600">Behavioral, demographic and RFM models</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-400">
-                    <h4 class="font-bold mb-2">Personalization</h4>
-                    <p class="text-sm text-gray-600">Dynamic content and recommendations</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-300">
-                    <h4 class="font-bold mb-2">Automation</h4>
-                    <p class="text-sm text-gray-600">Triggered campaigns and workflows</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-300">
-                    <h4 class="font-bold mb-2">Testing</h4>
-                    <p class="text-sm text-gray-600">A/B testing and optimization</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-pink-500">
-                    <h4 class="font-bold mb-2">Analytics</h4>
-                    <p class="text-sm text-gray-600">Campaign performance and LTV analysis</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-500">
-                    <h4 class="font-bold mb-2">Platforms</h4>
-                    <p class="text-sm text-gray-600">Klaviyo, HubSpot, Salesforce, Braze</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Business & Market Intelligence Section -->
-<section id="market-intel" class="mb-20 py-16 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600">
-                Business & Market Intelligence
-            </span>
-        </h2>
-
-        <div class="relative">
-            <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-                <i data-feather="activity" class="text-indigo-200 w-64 h-64"></i>
-            </div>
-
-            <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Business Insights -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-indigo-500">
-                    <h3 class="text-xl font-bold mb-4">Business Insights & Reporting</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-indigo-500 w-5"></i>
-                            Power BI dashboards for e-commerce, CRM, and revenue insights
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-indigo-500 w-5"></i>
-                            Automated reporting pipelines using Power Automate & SharePoint
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-indigo-500 w-5"></i>
-                            Weekly performance packs for leadership decision-making
-                        </li>
-                    </ul>
-
-                    <div class="flex flex-wrap gap-2 mt-4 text-xs">
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Power BI</span>
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Adobe Analytics</span>
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Reporting Automation</span>
-                    </div>
-                </div>
-
-                <!-- KPI Management -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold mb-4">KPI Management & Performance</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-blue-500 w-5"></i>
-                            Ownership of revenue, CLV, CTR, CTO, and conversion metrics
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-blue-500 w-5"></i>
-                            Performance readouts for CRM, paid media, and merchandising
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-blue-500 w-5"></i>
-                            KPI-driven optimisation to strengthen customer engagement
-                        </li>
-                    </ul>
-
-                    <div class="flex flex-wrap gap-2 mt-4 text-xs">
-                        <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">Conversion Analytics</span>
-                        <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">CRM Metrics</span>
-                        <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">Performance Tracking</span>
-                    </div>
-                </div>
-
-                <!-- Market Insights -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-indigo-400">
-                    <h3 class="text-xl font-bold mb-4">Market Insights & Competitive Analysis</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-indigo-400 w-5"></i>
-                            Competitive tracking of pricing, assortment, and promotional pressure
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-indigo-400 w-5"></i>
-                            Category visibility audits for retail & online marketplaces
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-feather="check" class="text-indigo-400 w-5"></i>
-                            Actionable insights that guide go-to-market & merchandising plans
-                        </li>
-                    </ul>
-
-                    <div class="flex flex-wrap gap-2 mt-4 text-xs">
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Benchmarking</span>
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Pricing Intelligence</span>
-                        <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full">Category Analysis</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- E-commerce Startup Operations Section -->
-<section id="startup-ops" class="mb-20 py-16 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-3xl">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-yellow-600">
-                E-commerce Startup Operations
-            </span>
-        </h2>
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-            <div class="lg:w-1/2">
-                <div class="relative h-full">
-                    <div class="absolute -top-6 -left-6 bg-amber-400 rounded-2xl w-24 h-24 opacity-20"></div>
-                    <div class="absolute -bottom-6 -right-6 bg-yellow-400 rounded-2xl w-24 h-24 opacity-20"></div>
-                    <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
-                        <h3 class="text-2xl font-bold mb-4 text-amber-700">End-to-End E-commerce Setup</h3>
-                        <p class="text-gray-600 mb-6">
-                            Practical experience building and scaling e-commerce operations from scratch, integrating channels, systems, and workflows into one coherent stack.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <div class="bg-amber-100 p-2 rounded-lg mr-4">
-                                    <i data-feather="shopping-cart" class="text-amber-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Channel Architecture</h4>
-                                    <p class="text-sm text-gray-600">
-                                        Structuring owned channels and marketplaces for reach and control.
-                                    </p>
-                                </div>
+        <section id="startup-ops" class="mb-20 py-16 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-3xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-yellow-600">
+                        E-commerce Startup Operations
+                    </span>
+                </h2>
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="relative h-full">
+                            <div class="absolute -top-6 -left-6 bg-amber-400 rounded-2xl w-24 h-24 opacity-20"></div>
+                            <div class="absolute -bottom-6 -right-6 bg-yellow-400 rounded-2xl w-24 h-24 opacity-20">
                             </div>
-                            <div class="flex items-center">
-                                <div class="bg-amber-100 p-2 rounded-lg mr-4">
-                                    <i data-feather="sliders" class="text-amber-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Operational Design</h4>
-                                    <p class="text-sm text-gray-600">
-                                        Mapping order, stock, and returns flows across systems and partners.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="bg-amber-100 p-2 rounded-lg mr-4">
-                                    <i data-feather="cpu" class="text-amber-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Tech Stack Integration</h4>
-                                    <p class="text-sm text-gray-600">
-                                        Connecting storefronts, CRM, and logistics tools via APIs and automations.
-                                    </p>
+                            <div class="relative bg-white p-8 rounded-3xl shadow-lg z-10">
+                                <h3 class="text-2xl font-bold mb-4 text-amber-700">End-to-End E-commerce Setup</h3>
+                                <p class="text-gray-600 mb-6">
+                                    Practical experience building and scaling e-commerce operations from scratch,
+                                    integrating channels, systems, and workflows into one coherent stack.
+                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <div class="bg-amber-100 p-2 rounded-lg mr-4">
+                                            <i data-feather="shopping-cart" class="text-amber-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Channel Architecture</h4>
+                                            <p class="text-sm text-gray-600">
+                                                Structuring owned channels and marketplaces for reach and control.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="bg-amber-100 p-2 rounded-lg mr-4">
+                                            <i data-feather="sliders" class="text-amber-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Operational Design</h4>
+                                            <p class="text-sm text-gray-600">
+                                                Mapping order, stock, and returns flows across systems and partners.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="bg-amber-100 p-2 rounded-lg mr-4">
+                                            <i data-feather="cpu" class="text-amber-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Tech Stack Integration</h4>
+                                            <p class="text-sm text-gray-600">
+                                                Connecting storefronts, CRM, and logistics tools via APIs and
+                                                automations.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-400">
-                    <h4 class="font-bold mb-2">Channel Management</h4>
-                    <p class="text-sm text-gray-600">
-                        Structuring assortments and pricing across webshops and partner channels.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-400">
-                    <h4 class="font-bold mb-2">Storefront & UX</h4>
-                    <p class="text-sm text-gray-600">
-                        Briefing and steering web development for conversion-focused experiences.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-300">
-                    <h4 class="font-bold mb-2">Fulfilment & Logistics</h4>
-                    <p class="text-sm text-gray-600">
-                        Aligning inventory, shipping options, and lead times with the customer promise.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-300">
-                    <h4 class="font-bold mb-2">Data & Integrations</h4>
-                    <p class="text-sm text-gray-600">
-                        Connecting ERPs, CRMs, and analytics platforms through API and feed setups.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-500">
-                    <h4 class="font-bold mb-2">Tooling & Automation</h4>
-                    <p class="text-sm text-gray-600">
-                        Implementing workflows for reporting, content updates, and stock monitoring.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-500">
-                    <h4 class="font-bold mb-2">Governance & Playbooks</h4>
-                    <p class="text-sm text-gray-600">
-                        Defining standards, processes, and documentation for scalable operations.
-                    </p>
+                    <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-400">
+                            <h4 class="font-bold mb-2">Channel Management</h4>
+                            <p class="text-sm text-gray-600">
+                                Structuring assortments and pricing across webshops and partner channels.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-400">
+                            <h4 class="font-bold mb-2">Storefront & UX</h4>
+                            <p class="text-sm text-gray-600">
+                                Briefing and steering web development for conversion-focused experiences.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-300">
+                            <h4 class="font-bold mb-2">Fulfilment & Logistics</h4>
+                            <p class="text-sm text-gray-600">
+                                Aligning inventory, shipping options, and lead times with the customer promise.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-300">
+                            <h4 class="font-bold mb-2">Data & Integrations</h4>
+                            <p class="text-sm text-gray-600">
+                                Connecting ERPs, CRMs, and analytics platforms through API and feed setups.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-500">
+                            <h4 class="font-bold mb-2">Tooling & Automation</h4>
+                            <p class="text-sm text-gray-600">
+                                Implementing workflows for reporting, content updates, and stock monitoring.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-yellow-500">
+                            <h4 class="font-bold mb-2">Governance & Playbooks</h4>
+                            <p class="text-sm text-gray-600">
+                                Defining standards, processes, and documentation for scalable operations.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Achievements -->
         <section class="animate-fade mb-20 py-16 bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold mb-12 text-center">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">Key Achievements</span>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">Key
+                        Achievements</span>
                 </h2>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-500"></div>
-<div class="text-4xl font-bold mb-2">140%</div>
-                    <p class="text-sm">YoY Revenue Growth at Microsoft</p>
-</div>
-                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
-<div class="text-4xl font-bold mb-2">35%</div>
-                    <p class="text-sm">Conversion Rate Improvement</p>
-</div>
-                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-red-500"></div>
-<div class="text-4xl font-bold mb-2">15</div>
-                    <p class="text-sm">Team Members Managed</p>
-</div>
-                <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500"></div>
-<div class="text-4xl font-bold mb-2">8</div>
-                    <p class="text-sm">New Markets Expanded Into</p>
-</div>
-            </div>
-</section>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-500">
+                        </div>
+                        <div class="text-4xl font-bold mb-2">140%</div>
+                        <p class="text-sm">YoY Revenue Growth at Microsoft</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-pink-500">
+                        </div>
+                        <div class="text-4xl font-bold mb-2">35%</div>
+                        <p class="text-sm">Conversion Rate Improvement</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-red-500">
+                        </div>
+                        <div class="text-4xl font-bold mb-2">15</div>
+                        <p class="text-sm">Team Members Managed</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl text-center shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500">
+                        </div>
+                        <div class="text-4xl font-bold mb-2">8</div>
+                        <p class="text-sm">New Markets Expanded Into</p>
+                    </div>
+                </div>
+        </section>
         <!-- Testimonials -->
         <section class="animate-fade mb-20 py-16 bg-gradient-to-r from-fuchsia-50 to-purple-50 rounded-3xl">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold mb-12 text-center">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-purple-600">Professional Endorsements</span>
+                    <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-purple-600">Professional
+                        Endorsements</span>
                 </h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-dark h-12 w-12 rounded-full mr-4"></div>
-                        <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-600">CMO at Microsoft</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-dark h-12 w-12 rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-bold">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-600">CMO at Microsoft</p>
+                            </div>
                         </div>
+                        <p class="italic">"A true e-commerce visionary who transformed our digital revenue streams. His
+                            data-driven approach and leadership skills were instrumental in growing our business by 140%
+                            year-over-year."</p>
                     </div>
-                    <p class="italic">"A true e-commerce visionary who transformed our digital revenue streams. His data-driven approach and leadership skills were instrumental in growing our business by 140% year-over-year."</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-dark h-12 w-12 rounded-full mr-4"></div>
-                        <div>
-                            <h4 class="font-bold">Michael Chen</h4>
-                            <p class="text-sm text-gray-600">CEO at Samsonite Asia</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-dark h-12 w-12 rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-bold">Michael Chen</h4>
+                                <p class="text-sm text-gray-600">CEO at Samsonite Asia</p>
+                            </div>
                         </div>
+                        <p class="italic">"Built our D2C channel from ground up to &euro;50M in just 4 years. His
+                            strategic thinking and execution excellence are unmatched in the e-commerce space."</p>
                     </div>
-                    <p class="italic">"Built our D2C channel from ground up to &euro;50M in just 4 years. His strategic thinking and execution excellence are unmatched in the e-commerce space."</p>
                 </div>
-            </div>
         </section>
         <!-- Contact -->
         <section id="contact" class="animate-fade mb-20 py-16 bg-gradient-to-r from-sky-50 to-blue-50 rounded-3xl">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold mb-12 text-center">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-600">Let's Connect</span>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
+                        Let's Connect
+                    </span>
                 </h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+                    <!-- Contact card -->
                     <div class="bg-white p-10 rounded-3xl shadow-lg">
                         <div class="flex items-center mb-6">
                             <div class="bg-dark text-light rounded-full p-3 mr-4">
                                 <i data-feather="user"></i>
                             </div>
-                            <h3 class="text-2xl font-bold">Contact Details</h3>
+                            <div>
+                                <h3 class="text-2xl font-bold">Contact Details</h3>
+                                <p class="text-sm text-gray-500">Esteban Schets · E-commerce Marketing Manager</p>
+                            </div>
                         </div>
+
                         <div class="space-y-4">
                             <div class="flex items-center">
-                                <i data-feather="mail" class="text-sky-600 mr-3"></i>
-                                <span>hello@revenuerocket.com</span>
+                                <i data-feather="phone" class="text-sky-600 mr-3"></i>
+                                <a href="tel:+32469161577" class="hover:text-sky-700 transition">
+                                    +32 469 16 15 77
+                                </a>
                             </div>
                             <div class="flex items-center">
-                                <i data-feather="phone" class="text-sky-600 mr-3"></i>
-                                <span>+1 (555) 123-4567</span>
+                                <i data-feather="linkedin" class="text-sky-600 mr-3"></i>
+                                <a href="https://linkedin.com/in/esteban-schets-b30885347" target="_blank"
+                                    rel="noopener" class="hover:text-sky-700 transition">
+                                    linkedin.com/in/esteban-schets-b30885347
+                                </a>
                             </div>
                             <div class="flex items-center">
                                 <i data-feather="map-pin" class="text-sky-600 mr-3"></i>
-                                <span>San Francisco, CA</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i data-feather="clock" class="text-sky-600 mr-3"></i>
-                                <span>Available Mon-Fri, 9AM-5PM PST</span>
+                                <span>Gavere-Asper, Belgium</span>
                             </div>
                         </div>
-                        <div class="mt-8 flex space-x-4">
-                            <a href="#" class="bg-dark text-light p-3 rounded-full hover:bg-opacity-90 transition">
-                                <i data-feather="linkedin"></i>
-                            </a>
-                            <a href="#" class="bg-dark text-light p-3 rounded-full hover:bg-opacity-90 transition">
-                                <i data-feather="twitter"></i>
-                            </a>
-                            <a href="#" class="bg-dark text-light p-3 rounded-full hover:bg-opacity-90 transition">
-                                <i data-feather="github"></i>
-                            </a>
+
+                        <div class="mt-8">
+                            <p class="text-sm text-gray-500 mb-3">
+                                Open to senior e-commerce, performance, and AI-driven marketing roles across Europe.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://linkedin.com/in/esteban-schets-b30885347" target="_blank"
+                                    rel="noopener"
+                                    class="bg-dark text-light px-5 py-2.5 rounded-full text-sm inline-flex items-center hover:bg-opacity-90 transition">
+                                    <i data-feather="message-circle" class="w-4 h-4 mr-2"></i>
+                                    Message on LinkedIn
+                                </a>
+                                <a href="tel:+32469161577"
+                                    class="border border-dark text-dark px-5 py-2.5 rounded-full text-sm inline-flex items-center hover:bg-dark hover:text-light transition">
+                                    <i data-feather="phone-call" class="w-4 h-4 mr-2"></i>
+                                    Call Directly
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Calendly inline widget -->
+
+                    <!-- Conversation / booking card -->
                     <div class="bg-white p-10 rounded-3xl shadow-lg relative overflow-hidden">
                         <div class="absolute -top-6 -right-6 bg-sky-500 rounded-full w-24 h-24 opacity-10"></div>
                         <div class="absolute -bottom-6 -left-6 bg-sky-400 rounded-full w-24 h-24 opacity-10"></div>
-                        
+
                         <div class="flex items-center mb-6 relative z-10">
                             <div class="bg-dark text-light rounded-full p-3 mr-4">
                                 <i data-feather="calendar"></i>
                             </div>
-                            <h3 class="text-2xl font-bold">Book an Appointment</h3>
+                            <h3 class="text-2xl font-bold">Discuss Opportunities</h3>
                         </div>
-                        <p class="mb-6 relative z-10">Schedule a 30-minute consultation to discuss how I can help grow your e-commerce business.</p>
-                        
-                        <div class="relative z-10 mb-6">
-                            <a href="#contact" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-full transition-colors duration-300 inline-flex items-center">
-                                <span>Book Now</span>
+
+                        <p class="mb-6 relative z-10 text-gray-600">
+                            Available for conversations on e-commerce strategy, AI-driven performance marketing, and
+                            senior digital roles.
+                        </p>
+
+                        <ul class="space-y-3 text-sm text-gray-600 mb-8 relative z-10">
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check" class="text-sky-600 w-4 mt-0.5"></i>
+                                <span>Scaling e-commerce and CRM performance across regions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check" class="text-sky-600 w-4 mt-0.5"></i>
+                                <span>Implementing AI and automation in marketing workflows</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check" class="text-sky-600 w-4 mt-0.5"></i>
+                                <span>Building dashboards and insights for leadership decisions</span>
+                            </li>
+                        </ul>
+
+                        <div class="relative z-10 flex flex-wrap gap-3">
+                            <a href="https://linkedin.com/in/esteban-schets-b30885347" target="_blank" rel="noopener"
+                                class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-full transition-colors duration-300 inline-flex items-center text-sm">
+                                <span>Connect on LinkedIn</span>
                                 <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                             </a>
+                            <a href="tel:+32469161577"
+                                class="bg-sky-50 text-sky-700 px-6 py-3 rounded-full border border-sky-200 inline-flex items-center text-sm hover:bg-sky-100 transition">
+                                <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                                <span>Quick Call</span>
+                            </a>
                         </div>
-</div>
-</div>
-</div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-<custom-footer></custom-footer>
-    
+    <custom-footer></custom-footer>
+
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
- 
