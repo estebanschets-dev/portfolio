@@ -1,4 +1,3 @@
-
 class CustomFooter extends HTMLElement {
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
@@ -39,14 +38,20 @@ class CustomFooter extends HTMLElement {
             <footer>
                 <div class="footer-content">
                     <div class="footer-links">
-                        <a href="#ai" class="footer-link">AI Expertise</a>
-                        <a href="#skills" class="footer-link">Skills</a>
+                        <a href="#top" class="footer-link">Overview</a>
                         <a href="#experience" class="footer-link">Experience</a>
-                        <a href="#achievements" class="footer-link">Achievements</a>
+                        <a href="#ai" class="footer-link">AI Expertise</a>
+                        <a href="#performance-marketing" class="footer-link">Performance</a>
+                        <a href="#omnichannel" class="footer-link">Omnichannel</a>
+                        <a href="#merchandising" class="footer-link">Merchandising</a>
+                        <a href="#brand" class="footer-link">Brand</a>
+                        <a href="#market-intel" class="footer-link">Market Intel</a>
+                        <a href="#startup-ops" class="footer-link">Startup Ops</a>
+                        <a href="#crm" class="footer-link">CRM</a>
                         <a href="#contact" class="footer-link">Contact</a>
                     </div>
                     <div class="copyright">
-                        &copy; ${new Date().getFullYear()} Revenue Rocket. All rights reserved.
+                        &copy; ${new Date().getFullYear()} Esteban Schets. All rights reserved.
                     </div>
                 </div>
             </footer>
@@ -55,5 +60,3 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define('custom-footer', CustomFooter);
-
-

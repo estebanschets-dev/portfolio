@@ -3,28 +3,7 @@ class CustomHeader extends HTMLElement {
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
         
-        let lastScroll = 0;
-        const header = this.shadowRoot.querySelector('header');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('hidden');
-                return;
-            }
-            
-            if (currentScroll > lastScroll && !header.classList.contains('hidden')) {
-                // Scroll down
-                header.classList.add('hidden');
-            } else if (currentScroll < lastScroll && header.classList.contains('hidden')) {
-                // Scroll up
-                header.classList.remove('hidden');
-            }
-            
-            lastScroll = currentScroll;
-        });
-this.shadowRoot.innerHTML = `
+        this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     display: block;
@@ -333,15 +312,15 @@ color: white;
             
             <header>
                 <nav>
-                    <a href="/" class="logo">
+                    <a href="#top" class="logo">
                         <span class="text-light">Esteban</span><span>Schets</span>
-</a>
+                    </a>
                     <div class="nav-links" style="margin-left: auto;">
                         <a href="#experience" class="nav-link">Featured Experience</a>
                         
                         <div class="nav-dropdown">
                             <button class="nav-dropdown-btn">Skills</button>
-<div class="nav-dropdown-content">
+                            <div class="nav-dropdown-content">
                                 <a href="#performance-marketing" class="nav-link">
                                     <i data-feather="bar-chart-2"></i>
                                     Performance Marketing
@@ -358,9 +337,13 @@ color: white;
                                     <i data-feather="award"></i>
                                     Brand Strategy
                                 </a>
-                                <a href="#product-mgmt" class="nav-link">
-                                    <i data-feather="package"></i>
-                                    Product Management
+                                <a href="#market-intel" class="nav-link">
+                                    <i data-feather="activity"></i>
+                                    Business &amp; Market Intelligence
+                                </a>
+                                <a href="#startup-ops" class="nav-link">
+                                    <i data-feather="settings"></i>
+                                    Startup &amp; Ops
                                 </a>
                                 <a href="#crm" class="nav-link">
                                     <i data-feather="users"></i>
@@ -370,7 +353,7 @@ color: white;
                                     <i data-feather="cpu"></i>
                                     AI Expertise
                                 </a>
-</div>
+                            </div>
                         </div>
                         
                         <a href="#contact" class="cta-button">Let's Connect</a>
@@ -394,7 +377,8 @@ color: white;
                         <a href="#omnichannel" class="nav-link">Omnichannel</a>
                         <a href="#merchandising" class="nav-link">Merchandising</a>
                         <a href="#brand" class="nav-link">Brand Strategy</a>
-                        <a href="#product-mgmt" class="nav-link">Product Management</a>
+                        <a href="#market-intel" class="nav-link">Business &amp; Market Intelligence</a>
+                        <a href="#startup-ops" class="nav-link">Startup &amp; Ops</a>
                         <a href="#crm" class="nav-link">CRM Marketing</a>
                         <a href="#ai" class="nav-link">AI Expertise</a>
                     </div>
@@ -410,6 +394,31 @@ color: white;
             'width': 16,
             'height': 16,
             'stroke-width': 2
+        });
+
+        // Header hide/show on scroll
+        const header = this.shadowRoot.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (!header) return;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('hidden');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains('hidden')) {
+                // Scroll down
+                header.classList.add('hidden');
+            } else if (currentScroll < lastScroll && header.classList.contains('hidden')) {
+                // Scroll up
+                header.classList.remove('hidden');
+            }
+
+            lastScroll = currentScroll;
         });
 
         // Mobile menu toggle logic
@@ -442,9 +451,17 @@ const mobileMenuButton = this.shadowRoot.getElementById('mobileMenuButton');
 // Update active link based on scroll position
         window.addEventListener('scroll', () => {
             const sections = [
-                '#ai', '#performance-marketing', '#omnichannel', 
-                '#merchandising', '#brand', '#product-mgmt',
-                '#crm', '#skills', '#experience', '#contact'
+                '#top',
+                '#experience',
+                '#ai',
+                '#performance-marketing',
+                '#omnichannel',
+                '#merchandising',
+                '#brand',
+                '#market-intel',
+                '#startup-ops',
+                '#crm',
+                '#contact'
             ];
             
             let currentSection = '';
